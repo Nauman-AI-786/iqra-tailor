@@ -35,6 +35,7 @@ nav a:hover{color:var(--mauve)}
 .hero .in{display:grid;gap:40px;align-items:center;grid-template-columns:1fr .92fr}
 .hero h1{font-family:'Great Vibes',cursive;font-weight:400;font-size:clamp(3.4rem,10vw,5.6rem);line-height:1}
 .hero .sub{font-family:'Fraunces',serif;letter-spacing:.2em;font-size:.95rem;color:var(--mauve);margin:6px 0 22px}
+.since{display:inline-block;background:var(--blush);color:var(--plum);border:1px dashed var(--mauve);border-radius:999px;padding:5px 16px;font-size:.85rem;font-weight:600;margin:0 0 18px}
 .hero p.d{color:var(--text2);max-width:520px;margin:0 0 26px}
 .hero .loc{color:var(--mauve);font-size:.9rem;margin-top:18px}
 .ph{position:relative}
@@ -64,6 +65,28 @@ nav a:hover{color:var(--mauve)}
 .step{background:var(--paper);border-radius:24px;padding:24px}
 .step span{display:block;color:var(--mauve);font-weight:600;margin-bottom:16px}
 .step h3{font-size:1.1rem}
+.rates{display:grid;gap:16px;grid-template-columns:repeat(3,1fr);margin-bottom:34px}
+.rate{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:26px;text-align:center;outline:1px dashed rgba(68,43,61,.25);outline-offset:-9px}
+.rate h3{font-size:1.15rem;margin-bottom:4px}
+.rate small{color:var(--text2);display:block;min-height:40px}
+.rate .old{color:var(--mauve);text-decoration:line-through;font-size:1.05rem;margin-top:12px}
+.rate .new{font-family:'Fraunces',serif;font-size:2.2rem;line-height:1.1}
+.rate .save{display:inline-block;background:var(--rose);border-radius:999px;padding:3px 14px;font-size:.8rem;font-weight:600;margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 22px;padding:0;list-style:none}
+.chips li{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font-weight:500}
+.poster2{margin-top:22px;border-radius:32px;background:linear-gradient(135deg,#442b3d,#6b4560 70%,#826477);color:#fff;padding:clamp(28px,5vw,52px);display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;outline:1px dashed rgba(255,255,255,.4);outline-offset:-11px;box-shadow:0 20px 40px rgba(68,43,61,.18)}
+.poster2 .eyebrow{color:#e6c98f}
+.poster2 h3{font-size:clamp(1.5rem,4vw,2.2rem);margin-bottom:12px}
+.poster2 ul{list-style:none;padding:0;margin:0 0 22px}
+.poster2 li{padding:6px 0;color:var(--rose)}
+.poster2 li::before{content:"✦ ";color:#e6c98f}
+.poster2 .btn{background:#e6c98f;color:#442b3d;box-shadow:none}
+.poster2 svg{width:100%;max-width:240px;justify-self:center}
+.badge{display:inline-block;background:#e6c98f;color:#442b3d;font-weight:700;border-radius:999px;padding:5px 16px;margin-bottom:14px;font-size:.85rem}
+.ask{background:var(--paper);border-radius:24px;padding:26px;text-align:center;outline:1px dashed rgba(68,43,61,.25);outline-offset:-9px}
+.ask h3{font-size:1.25rem;margin-bottom:8px}
+.ask p{margin:0 0 10px;color:var(--text2)}
+.ask b{color:var(--plum)}
 .contact{text-align:center}
 .pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:0 0 28px}
 .pills p{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:14px 24px;font-weight:600}
@@ -71,7 +94,7 @@ footer{background:var(--plum);text-align:center;padding:34px 20px 90px;color:#ff
 footer .nm{font-family:'Great Vibes',cursive;font-size:2.2rem;line-height:1.1}
 footer p{margin:6px 0 0;color:var(--rose);font-size:.85rem}
 .wa{position:fixed;right:18px;bottom:18px;z-index:20;min-height:48px;padding:12px 22px;border-radius:999px;background:var(--plum);color:#fff;font-weight:600;display:flex;align-items:center;box-shadow:0 12px 28px rgba(0,0,0,.25)}
-@media(max-width:820px){.hero .in,.about,.poster,.work{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.ph::before{left:-8px;bottom:-8px}}
+@media(max-width:820px){.poster2{grid-template-columns:1fr}.rates{grid-template-columns:1fr}.hero .in,.about,.poster,.work{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.ph::before{left:-8px;bottom:-8px}}
 @media(max-width:480px){.pts,.steps{grid-template-columns:1fr}nav{font-size:.85rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rise{animation:none}.btn{transition:none}}
 </style>
@@ -87,9 +110,9 @@ footer p{margin:6px 0 0;color:var(--rose);font-size:.85rem}
    <path d="M30 40 C14 40 14 26 26 28 C36 30 42 38 46 32" fill="none" stroke="#f2e2e3" stroke-width="1.6" stroke-linecap="round"/>
    <path d="M21 46 H39" stroke="#e6c98f" stroke-width="1.6" stroke-linecap="round"/>
   </svg>
-  <span><span class="nm">Iqra</span><span class="tg">LADIES &amp; KIDS TAILOR</span></span>
+  <span><span class="nm">Iqra</span><span class="tg">LADIES &amp; KIDS TAILOR • SINCE 2002</span></span>
  </a>
- <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#about">About</a><a href="#offers">Offers</a><a href="#process">Process</a><a href="#contact">Contact</a></nav>
+ <nav aria-label="Main navigation"><a href="#services">Services</a><a href="#rates">Rates</a><a href="#about">About</a><a href="#offers">Offers</a><a href="#process">Process</a><a href="#contact">Contact</a></nav>
 </div></header>
 
 <main id="home">
@@ -97,7 +120,7 @@ footer p{margin:6px 0 0;color:var(--rose);font-size:.85rem}
  <div class="rise">
   <p class="eyebrow">LAHORE • HOME-BASED TAILORING</p>
   <h1>Iqra</h1>
-  <div class="sub">LADIES &amp; KIDS TAILOR</div>
+  <div class="sub">LADIES &amp; KIDS TAILOR</div><span class="since">Since 2002 • 20 saal se zyada ka tajurba</span>
   <p class="d">Ghar par ladies aur kids ke liye professional silai. Iqra har tarah ke kapray nafasat aur tawajjo se silti hain. Apna design share karein aur fitting ke bare mein baat karein.</p>
   <a class="btn" href="https://wa.me/923314373867" target="_blank" rel="noopener noreferrer">WhatsApp par rabta karein ↗</a>
   <p class="loc">Liaqtabad, Model Town, Lahore</p>
@@ -109,22 +132,42 @@ footer p{margin:6px 0 0;color:var(--rose);font-size:.85rem}
  <p class="eyebrow">MADE WITH CARE</p><h2>Our Services</h2>
  <p class="lead">Rozmarra ke kapron se khaas designs tak, ladies aur kids ke liye silai aur fitting.</p>
  <div class="grid3">
-  <article class="card"><span class="st">✦</span><h3>Ladies Stitching</h3><p>Shalwar kameez, 2-piece aur 3-piece suits, dresses aur trouser ki silai.</p></article>
-  <article class="card"><span class="st">✦</span><h3>Kids Stitching</h3><p>Bachon ke frocks, dresses aur rozmarra ke kapray unke naap ke mutabiq.</p></article>
+  <article class="card"><span class="st">✦</span><h3>Ladies Stitching</h3><p>Simple, lining aur designing suits, abaya, saree silai, gharara, sharara, lehnga aur trouser ki silai.</p></article>
+  <article class="card"><span class="st">✦</span><h3>Kids Stitching</h3><p>Bachon ke suits, frocks, langa aur rozmarra ke kapray unke naap ke mutabiq.</p></article>
   <article class="card"><span class="st">✦</span><h3>Details &amp; Fitting</h3><p>Sleeves aur neck designs, alterations aur custom fitting par tawajjo.</p></article>
+ </div>
+</div></section>
+
+<section id="rates" class="blush"><div class="in">
+ <p class="eyebrow">SILAI RATES</p><h2>Silai ki list aur qeemat</h2>
+ <p class="lead">Suit silai ke khaas rates. Mehdood waqt ke liye discount qeemat.</p>
+ <div class="rates">
+  <div class="rate"><h3>Simple suit</h3><small>Saada design, aam silai</small><div class="old">Rs. 800</div><div class="new">Rs. 600</div><span class="save">Rs. 200 bachat</span></div>
+  <div class="rate"><h3>Lining wala suit</h3><small>Lining ke saath, behtar fitting</small><div class="old">Rs. 1500</div><div class="new">Rs. 1000</div><span class="save">Rs. 500 bachat</span></div>
+  <div class="rate"><h3>Designing suit</h3><small>Khaas design aur finishing</small><div class="old">Rs. 1500</div><div class="new">Rs. 1000</div><span class="save">Rs. 500 bachat</span></div>
+ </div>
+ <h3 style="margin-bottom:14px">Hum yeh sab silai karte hain</h3>
+ <ul class="chips">
+  <li>Simple suit</li><li>Lining wala suit</li><li>Designing suit</li><li>Abaya</li><li>Saree silai</li><li>Frock</li><li>Langa / Lehnga</li><li>Gharara</li><li>Sharara</li><li>Maxi</li><li>Kurti</li><li>Trouser / Palazzo</li><li>Shalwar</li><li>Bridal dress</li><li>Kids suit</li><li>Kids frock</li><li>Alteration</li>
+ </ul>
+ <div class="ask">
+  <h3>Kisi bhi suit ki price ke liye rabta karein</h3>
+  <p>Abaya, saree, frock, langa, gharara, bridal ya koi bhi design: rate design dekh kar bataya jata hai.</p>
+  <p><b>WhatsApp: 03314373867</b></p>
+  <a class="btn" href="https://wa.me/923314373867?text=Assalam%20o%20Alaikum%2C%20mujhe%20silai%20ki%20price%20maloom%20karni%20hai." target="_blank" rel="noopener noreferrer">Price poochein ↗</a>
  </div>
 </div></section>
 
 <section id="about" class="blush"><div class="in about">
  <div><p class="eyebrow">A PERSONAL TOUCH</p><h2>Silai mein nafasat, har kapray par tawajjo.</h2></div>
  <div>
-  <p>Iqra ghar se kaam karti hain, jahan ladies aur bachon ke kapron ko araam se samajh kar sila jata hai. Design, naap aur finishing par baat karke aap apni zaroorat ke mutabiq silai karwa sakti hain.</p>
+  <p>Iqra 2002 se ghar se kaam karti hain, jahan ladies aur bachon ke kapron ko araam se samajh kar sila jata hai. Design, naap aur finishing par baat karke aap apni zaroorat ke mutabiq silai karwa sakti hain.</p>
   <div class="pts"><p>Ghar se kaam</p><p>Saaf finishing</p><p>Naap ke mutabiq fitting</p><p>Ladies aur kids par khaas tawajjo</p></div>
  </div>
 </div></section>
 
 <section id="offers"><div class="in">
- <p class="eyebrow">A LITTLE EXTRA FOR YOU</p><h2>Stitching Offers</h2>
+ <p class="eyebrow">A LITTLE EXTRA FOR YOU</p><h2>Stitching Offers</h2><p class="lead">Discount, khaas rates aur ghar baithe pickup aur delivery.</p>
  <div class="poster">
   <div class="t">
    <p class="eyebrow">SILAI OFFER</p>
@@ -134,6 +177,27 @@ footer p{margin:6px 0 0;color:var(--rose);font-size:.85rem}
    <a class="btn" href="https://wa.me/923314373867" target="_blank" rel="noopener noreferrer">WhatsApp par booking karein ↗</a>
   </div>
   <img src="https://images.pexels.com/photos/2974110/pexels-photo-2974110.jpeg?auto=compress&cs=tinysrgb&w=1280" alt="Tailoring tools and fabrics arranged on a workbench" loading="lazy">
+ </div>
+
+ <div class="poster2">
+  <div>
+   <span class="badge">FREE SERVICE</span>
+   <h3>Ghar se pickup, ghar par delivery</h3>
+   <ul><li>Kapray aap ke ghar se uthaye jayenge</li><li>Silai ke baad suit ghar par pohnchaya jayega</li><li>Bahar jane ki zaroorat nahi, WhatsApp par booking karein</li></ul>
+   <a class="btn" href="https://wa.me/923314373867?text=Assalam%20o%20Alaikum%2C%20mujhe%20pickup%20aur%20delivery%20offer%20ke%20baare%20mein%20maloomat%20chahiye." target="_blank" rel="noopener noreferrer">Pickup book karein ↗</a>
+  </div>
+  <svg viewBox="0 0 200 180" aria-hidden="true">
+   <circle cx="100" cy="90" r="84" fill="#ffffff" opacity=".08"/>
+   <path d="M30 150 H170" stroke="#e6c98f" stroke-width="3" stroke-dasharray="6 5"/>
+   <rect x="52" y="62" width="62" height="62" rx="8" fill="#f2e2e3"/>
+   <path d="M52 78 H114" stroke="#c9a36a" stroke-width="3"/><path d="M83 62 V78" stroke="#c9a36a" stroke-width="3"/>
+   <path d="M70 100 Q83 92 96 100" fill="none" stroke="#826477" stroke-width="2"/>
+   <circle cx="82" cy="142" r="12" fill="#e6c98f"/><circle cx="82" cy="142" r="5" fill="#442b3d"/>
+   <circle cx="146" cy="142" r="12" fill="#e6c98f"/><circle cx="146" cy="142" r="5" fill="#442b3d"/>
+   <path d="M114 100 H134 L146 142 M82 142 L96 112 H134" fill="none" stroke="#e6c98f" stroke-width="4" stroke-linecap="round"/>
+   <path d="M128 100 L124 88 H138" fill="none" stroke="#e6c98f" stroke-width="4" stroke-linecap="round"/>
+   <path d="M20 118 H40 M14 130 H34" stroke="#e6c98f" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+  </svg>
  </div>
 </div></section>
 
@@ -146,10 +210,10 @@ footer p{margin:6px 0 0;color:var(--rose);font-size:.85rem}
 <section id="process" class="blush"><div class="in">
  <p class="eyebrow">SIMPLE STEPS</p><h2 style="margin-bottom:34px">How It Works</h2>
  <div class="steps">
-  <div class="step"><span>01 /</span><h3>WhatsApp par rabta</h3></div>
+  <div class="step"><span>01 /</span><h3>WhatsApp par rabta, ghar se pickup</h3></div>
   <div class="step"><span>02 /</span><h3>Design aur kapra discuss</h3></div>
   <div class="step"><span>03 /</span><h3>Naap aur fitting</h3></div>
-  <div class="step"><span>04 /</span><h3>Final stitching</h3></div>
+  <div class="step"><span>04 /</span><h3>Final stitching aur ghar par delivery</h3></div>
  </div>
 </div></section>
 
@@ -161,7 +225,7 @@ footer p{margin:6px 0 0;color:var(--rose);font-size:.85rem}
 </div></section>
 </main>
 
-<footer><div class="nm">Iqra</div><div style="letter-spacing:.18em;font-size:.75rem">LADIES &amp; KIDS TAILOR</div><p>© 2026 Iqra Ladies &amp; Kids Tailor. Lahore.</p></footer>
+<footer><div class="nm">Iqra</div><div style="letter-spacing:.18em;font-size:.75rem">LADIES &amp; KIDS TAILOR • SINCE 2002</div><p>© 2002–2026 Iqra Ladies &amp; Kids Tailor. Lahore.</p></footer>
 <a class="wa" href="https://wa.me/923314373867" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a>
 </body>
 </html>
